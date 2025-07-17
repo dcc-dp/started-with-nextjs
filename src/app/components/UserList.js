@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { deleteUser } from "../lib/actions";
 import UserForm from "./UserForm";
 
 export default function UserList({ users }) {
@@ -44,10 +43,11 @@ export default function UserList({ users }) {
             borderCollapse: "collapse",
             backgroundColor: "white",
             boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+            color: "#000",
           }}
         >
           <thead>
-            <tr style={{ backgroundColor: "#f8f9fa" }}>
+            <tr style={{ backgroundColor: "#f8f9fa", color: "#000" }}>
               <th
                 style={{
                   padding: "12px",
@@ -143,6 +143,7 @@ export default function UserList({ users }) {
                   style={{
                     padding: "12px",
                     border: "1px solid #dee2e6",
+                    color: "#000",
                   }}
                 >
                   <button
