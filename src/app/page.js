@@ -1,5 +1,6 @@
 import UserForm from "./components/UserForm";
 import UserList from "./components/UserList";
+import { getUsers } from "./lib/actions";
 
 export default async function Home() {
   let users = [];
