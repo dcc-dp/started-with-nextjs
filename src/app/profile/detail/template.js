@@ -4,10 +4,10 @@ export default function templateDetail ({children}) {
     return (
         <>   
             {/* <header>ini templet detail header</header> */}
-            <main>
-                {children}
-                <h1> Ini Template <Counter /></h1>
-            </main>
+                <main>
+                    <h1> Ini Template <Counter /></h1>
+                    {children}
+                </main>
             {/* <footer>ini templet detail footer</footer> */}
          </>
     );

@@ -5,8 +5,8 @@ export default function layoutDetail({ children }) {
     <>   
       {/* <header>ini layout detail header</header> */}
       <main>
-        {children}
        <h1> Ini Layout <Counter /></h1>
+        {children}
       </main>
       {/* <footer>ini layout detail footer</footer> */}
     </>
