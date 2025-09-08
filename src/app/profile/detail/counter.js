@@ -8,7 +8,7 @@ export default function Counter() {
   return (
     <div>
       <h1>{state}</h1>
-      <button onClick={() => setState(state + 1)}>klik</button>
+      <button onClick={() => setState(state + 1)} className="button"  >klik</button>
     </div>
   );
 }

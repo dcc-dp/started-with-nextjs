@@ -5,8 +5,8 @@ export default function templateDetail ({children}) {
         <>   
             {/* <header>ini templet detail header</header> */}
                 <main>
-                    <h1> Ini Template <Counter /></h1>
                     {children}
+                    <h1> Ini Template <Counter /></h1>
                 </main>
             {/* <footer>ini templet detail footer</footer> */}
          </>
