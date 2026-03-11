@@ -10,7 +10,4 @@ const connection = mysql.createPool({
   queueLimit: 0,
 });
 
-export default connection;
-
-// testetss
-////kjdsbfksdjfskj
+export default connection;

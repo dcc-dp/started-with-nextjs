@@ -14,8 +14,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ff0000;
-    --foreground: #b90707c0;
+    --background: #ccfffc5d;
+    --foreground: #4b5f7b;
   }
 }
 
@@ -34,19 +34,22 @@ body {
   font-size: 1em;
   font-family: inherit;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
 }
 
 .button:hover {
   background: var(--foreground);
   color: var(--background);
   border-color: var(--background);
-} 
+}
 
 .kotak {
   width: 100px;
   height: 100px;
-  background-color: red;
+  background-color: rgb(255, 255, 255);
   color: white;
   display: flex;
   justify-content: center;
@@ -54,4 +57,5 @@ body {
   font-size: 24px;
   font-weight: bold;
   border-radius: 8px;
+  border-radius: 10px;
 }
