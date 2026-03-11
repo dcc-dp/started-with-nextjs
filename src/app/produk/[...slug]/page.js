@@ -1,5 +1,5 @@
 async function getData() {
-  const res = await fetch("https://fakestoreapi.com/products");
+  const res = await fetch("https://fakestoreapi.com/productss");
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
