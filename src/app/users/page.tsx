@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   getAllUsers,
   createUser,
@@ -21,14 +21,15 @@ export default function UsersClient() {
   const [editingId, setEditingId] = useState<number | null>(null);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    fetchUsers();
-  }, []);
-
-  async function fetchUsers() {
+  const fetchUsers = useCallback(async () => {
     const data = await getAllUsers();
     setUsers(data);
-  }
+  }, []);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    void fetchUsers();
+  }, [fetchUsers]);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -56,7 +57,7 @@ export default function UsersClient() {
   async function handleDelete(id: number) {
     if (!confirm("Yakin hapus user ini?")) return;
     await deleteUser(id);
-    fetchUsers();
+    await fetchUsers();
   }
 
   return (
